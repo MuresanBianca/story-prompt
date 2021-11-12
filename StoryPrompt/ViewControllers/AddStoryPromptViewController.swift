@@ -9,7 +9,7 @@ import UIKit
 import PhotosUI
 import Photos
 
-class ViewController: UIViewController {
+class AddStoryPromptViewController: UIViewController {
     
     var storyPromt = StoryPromptEntry()
     
@@ -32,9 +32,16 @@ class ViewController: UIViewController {
         storyPromt.verb = "run"
         storyPromptImageView.isUserInteractionEnabled = true
         
-//        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(changeImage))
-//        storyPromptImageView.addGestureRecognizer(gestureRecognizer)
-//        print(storyPromt.description)
+        //add gesture recognizer on image
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(changeImage))
+        gestureRecognizer.numberOfTapsRequired = 1
+        gestureRecognizer.numberOfTouchesRequired = 1
+        storyPromptImageView.addGestureRecognizer(gestureRecognizer)
+        storyPromptImageView.isUserInteractionEnabled = true
+        
+        //scrollView
+        let scrollView = UIScrollView(frame: view.bounds)
+        view.addSubview(scrollView)
 }
 
     @IBAction func changeNumber(_ sender: UISlider) {
@@ -58,8 +65,16 @@ class ViewController: UIViewController {
     @IBAction func changeStory(_ sender: UIButton) {
         resignAllFirstResponders()
         updateStoryPrompt()
-        changeImage()
-
+        if storyPromt.isValid() {
+            print(storyPromt.description)
+        } else {
+            let alert = UIAlertController(title: "Invalid Story Prompt", message: "Please fill out all of the fields", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default) { action in }
+            alert.addAction(action)
+            present(alert, animated: true)
+        }
+        print(storyPromt.noun)
+        
     }
     
     //build in method
@@ -68,7 +83,17 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    func changeImage() {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "StoryPrompt" {
+            guard let storyPromptViewController = segue.destination as? StoryPromptViewController else {
+                return
+            }
+            storyPromptViewController.storyPromt = storyPromt
+        }
+    }
+    
+    //what happen when the image view is tapped
+    @objc func changeImage() {
         //open image picker
         let pickerController = UIImagePickerController()
         pickerController.sourceType = .photoLibrary //or .camera
@@ -77,6 +102,7 @@ class ViewController: UIViewController {
         pickerController.allowsEditing = true
         present(pickerController,animated: true)
     }
+    
     
     func resignAllFirstResponders() {
         self.nounTextField.resignFirstResponder()
@@ -97,7 +123,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension AddStoryPromptViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         updateStoryPrompt()
@@ -105,7 +131,7 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
-extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension AddStoryPromptViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //when the user select an image
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
