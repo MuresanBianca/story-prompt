@@ -27,9 +27,6 @@ class AddStoryPromptViewController: UIViewController {
         configureTextFields()
         numberSlider.value = 7.5
         storyPromt.number = Int(numberSlider.value)
-        storyPromt.noun = "human"
-        storyPromt.adjective = "smelly"
-        storyPromt.verb = "run"
         storyPromptImageView.isUserInteractionEnabled = true
         
         //add gesture recognizer on image
@@ -41,35 +38,32 @@ class AddStoryPromptViewController: UIViewController {
 }
 
     @IBAction func changeNumber(_ sender: UISlider) {
-        
         resignAllFirstResponders()
-        
         numberLabel.text = "Number: \(Int(sender.value))"
         storyPromt.number = Int(sender.value)
     }
     
     @IBAction func changeStoryType(_ sender: UISegmentedControl) {
         resignAllFirstResponders()
-        
         if sender.selectedSegmentIndex == 0 {
             storyPromt.genre = .scifi
         } else {
             storyPromt.genre = .horror
         }
+        storyPromt.updateStory(genre: storyPromt.genre)
     }
     
     @IBAction func changeStory(_ sender: UIButton) {
         resignAllFirstResponders()
         updateStoryPrompt()
         if storyPromt.isValid() {
-            print(storyPromt.description)
+            performSegue(withIdentifier: "StoryPrompt", sender: nil)
         } else {
             let alert = UIAlertController(title: "Invalid Story Prompt", message: "Please fill out all of the fields", preferredStyle: .alert)
             let action = UIAlertAction(title: "Ok", style: .default) { action in }
             alert.addAction(action)
             present(alert, animated: true)
         }
-        print(storyPromt.noun)
         
     }
     

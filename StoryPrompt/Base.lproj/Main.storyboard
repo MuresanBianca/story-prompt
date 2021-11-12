@@ -143,7 +143,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Generate Story Prompy"/>
                                         <connections>
-                                            <segue destination="ReA-Ll-AJV" kind="show" identifier="StoryPrompt" id="vrZ-9T-i4R"/>
+                                            <action selector="changeStory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XN1-c7-VXW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -166,6 +166,7 @@
                         <outlet property="numberSlider" destination="QDT-T8-jHm" id="GbH-5k-Dmy"/>
                         <outlet property="storyPromptImageView" destination="Dtx-02-mEc" id="Kuc-rg-sX2"/>
                         <outlet property="verbTextField" destination="szK-ky-FxK" id="7hI-jg-QHF"/>
+                        <segue destination="ReA-Ll-AJV" kind="show" identifier="StoryPrompt" id="DB7-TG-VA3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
