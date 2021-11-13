@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bLs-KS-GyT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -10,7 +10,72 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Story Prompt View Controller-->
+        <!--Story Prompts-->
+        <scene sceneID="VpC-eu-LIG">
+            <objects>
+                <tableViewController id="ECv-2n-qBb" customClass="StoryPromptTableViewController" customModule="StoryPrompt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="fPy-qY-Q88">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.79268091919999994" green="0.81873601679999997" blue="0.87451785800000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.59490789980000003" green="0.3078654187" blue="0.77357813959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="separatorColor" red="0.79268091919999994" green="0.81873601679999997" blue="0.87451785800000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexColor" red="0.204351902" green="0.1057658717" blue="0.26668035979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" red="0.79268091919999994" green="0.81873601679999997" blue="0.87451785800000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.56200236079999999" green="0.47333621980000001" blue="0.73335987329999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryPromptCell" id="pIW-ND-zoG">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pIW-ND-zoG" id="K7u-qK-HKO">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.95306485890000003" green="0.96059340240000002" blue="0.97255140539999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ECv-2n-qBb" id="WyV-iD-Z2E"/>
+                            <outlet property="delegate" destination="ECv-2n-qBb" id="5w9-Nl-NUa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Story Prompts" id="shW-8s-cZu">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="4dW-ne-EBF">
+                            <color key="tintColor" red="0.47324228289999998" green="0.13366019730000001" blue="0.78435760740000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="OXI-JW-DJ5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="ReA-Ll-AJV" kind="show" identifier="ShowStoryPrompt" id="exQ-PA-yCV"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sxa-Sa-b1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-709" y="258"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bjk-NK-DPl">
+            <objects>
+                <navigationController id="bLs-KS-GyT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fHC-nh-fGU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.47324228289999998" green="0.13366019730000001" blue="0.78435760740000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.31437629459999999" green="0.16623172159999999" blue="0.40786334870000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ECv-2n-qBb" kind="relationship" relationship="rootViewController" id="1qh-ia-hHO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0U-q0-fVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1497" y="258"/>
+        </scene>
+        <!--Generate Story Prompt-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AddStoryPromptViewController" customModule="StoryPrompt" customModuleProvider="target" sceneMemberID="viewController">
@@ -157,8 +222,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sUM-rX-Zns" secondAttribute="trailing" constant="20" id="N5B-f3-wp4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HJd-98-XTM"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationItem key="navigationItem" title="Generate Story Prompt" largeTitleDisplayMode="always" id="HJd-98-XTM"/>
                     <connections>
                         <outlet property="adjectiveTextField" destination="ZWj-Zf-rCo" id="UBP-MN-BTI"/>
                         <outlet property="nounTextField" destination="olI-Vh-MzE" id="ADy-mY-jEO"/>
@@ -171,12 +235,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>
+            <point key="canvasLocation" x="174" y="-126"/>
         </scene>
         <!--Story Prompt View Controller-->
         <scene sceneID="liw-yQ-BgW">
             <objects>
-                <viewController id="ReA-Ll-AJV" customClass="StoryPromptViewController" customModule="StoryPrompt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ReA-Ll-AJV" customClass="StoryPromptViewController" customModule="StoryPrompt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X23-yI-nPl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,16 +271,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HVW-Kc-1fO"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="storyPromptTextView" destination="gh5-0k-1Br" id="En9-08-Lrl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCl-j5-Nu9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="843" y="86"/>
+            <point key="canvasLocation" x="1013" y="252"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DB7-TG-VA3"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="05.circle" catalog="system" width="128" height="121"/>
         <image name="10.circle" catalog="system" width="128" height="121"/>

@@ -20,12 +20,4 @@ class StoryPromptViewController: UIViewController {
         super.viewDidLoad()
         storyPromptTextView.text = storyPromt?.description
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-       navigationController?.setNavigationBarHidden(true, animated: animated)
-     }
-
-     override func viewWillDisappear(_ animated: Bool) {
-         storyPromt?.updateStory(genre: storyPromt?.genre ?? StoryPrompt.Genre.scifi)
-     }
 }

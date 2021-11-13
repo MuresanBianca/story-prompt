@@ -20,5 +20,113 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4D787B5-5304-4369-AF3A-7F94F4430B86"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StoryPrompt/ViewControllers/StoryPromptViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "StoryPromptViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "F4D787B5-5304-4369-AF3A-7F94F4430B86 - deee691a2cba59c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StoryPrompt.StoryPromptViewController.storyPromptTextView.getter : Swift.Optional&lt;__C.UITextView&gt;"
+                  moduleName = "StoryPrompt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bianca.muresan/Desktop/untitled%20folder/uikitfundamentals/StoryPrompt/StoryPrompt/ViewControllers/StoryPromptViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "F4D787B5-5304-4369-AF3A-7F94F4430B86 - f0fae28d26688da5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StoryPrompt.StoryPromptViewController.storyPromptTextView.setter : Swift.Optional&lt;__C.UITextView&gt;"
+                  moduleName = "StoryPrompt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bianca.muresan/Desktop/untitled%20folder/uikitfundamentals/StoryPrompt/StoryPrompt/ViewControllers/StoryPromptViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "F4D787B5-5304-4369-AF3A-7F94F4430B86 - 380995e2e86078d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StoryPrompt.StoryPromptViewController.storyPromptTextView.modify : Swift.Optional&lt;__C.UITextView&gt;"
+                  moduleName = "StoryPrompt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bianca.muresan/Desktop/untitled%20folder/uikitfundamentals/StoryPrompt/StoryPrompt/ViewControllers/StoryPromptViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "F4D787B5-5304-4369-AF3A-7F94F4430B86 - 7c1dd861e0ed70b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StoryPrompt.StoryPromptViewController.storyPromptTextView.modify : Swift.Optional&lt;__C.UITextView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "StoryPrompt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bianca.muresan/Desktop/untitled%20folder/uikitfundamentals/StoryPrompt/StoryPrompt/ViewControllers/StoryPromptViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "F4D787B5-5304-4369-AF3A-7F94F4430B86 - 7e3ae09683983157"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StoryPrompt.StoryPromptViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; StoryPrompt.StoryPromptViewController"
+                  moduleName = "StoryPrompt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bianca.muresan/Desktop/untitled%20folder/uikitfundamentals/StoryPrompt/StoryPrompt/ViewControllers/StoryPromptViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "F4D787B5-5304-4369-AF3A-7F94F4430B86 - cf27c7fd42809b93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StoryPrompt.StoryPromptViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;StoryPrompt.StoryPromptViewController&gt;"
+                  moduleName = "StoryPrompt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bianca.muresan/Desktop/untitled%20folder/uikitfundamentals/StoryPrompt/StoryPrompt/ViewControllers/StoryPromptViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "113">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -16,6 +16,7 @@
 		34AE3C07273E6ED100B74EA2 /* StoryPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE3C06273E6ED100B74EA2 /* StoryPromptViewController.swift */; };
 		34AE3C0C273E883100B74EA2 /* StoryPromptEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE3C0B273E883100B74EA2 /* StoryPromptEntry.swift */; };
 		34AE3C0F273E888700B74EA2 /* StoryPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE3C0E273E888700B74EA2 /* StoryPrompt.swift */; };
+		34AE3C11273E9AA400B74EA2 /* StoryPromptTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE3C10273E9AA400B74EA2 /* StoryPromptTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		34AE3C06273E6ED100B74EA2 /* StoryPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPromptViewController.swift; sourceTree = "<group>"; };
 		34AE3C0B273E883100B74EA2 /* StoryPromptEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPromptEntry.swift; sourceTree = "<group>"; };
 		34AE3C0E273E888700B74EA2 /* StoryPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPrompt.swift; sourceTree = "<group>"; };
+		34AE3C10273E9AA400B74EA2 /* StoryPromptTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPromptTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				34AE3BF1273BA0E700B74EA2 /* AddStoryPromptViewController.swift */,
 				34AE3C06273E6ED100B74EA2 /* StoryPromptViewController.swift */,
+				34AE3C10273E9AA400B74EA2 /* StoryPromptTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34AE3C11273E9AA400B74EA2 /* StoryPromptTableViewController.swift in Sources */,
 				34AE3C0C273E883100B74EA2 /* StoryPromptEntry.swift in Sources */,
 				34AE3C07273E6ED100B74EA2 /* StoryPromptViewController.swift in Sources */,
 				34AE3BF2273BA0E700B74EA2 /* AddStoryPromptViewController.swift in Sources */,

@@ -53,6 +53,12 @@ class AddStoryPromptViewController: UIViewController {
         storyPromt.updateStory(genre: storyPromt.genre)
     }
     
+    override func viewWillAppear(_ animated: Bool){
+        self.navigationController!.navigationBar.isTranslucent = true
+       
+
+    }
+    
     @IBAction func changeStory(_ sender: UIButton) {
         resignAllFirstResponders()
         updateStoryPrompt()
