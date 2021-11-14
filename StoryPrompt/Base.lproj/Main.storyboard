@@ -284,7 +284,6 @@
                                         <connections>
                                             <action selector="saveStory:" destination="ReA-Ll-AJV" eventType="touchUpInside" id="sar-P7-Tcl"/>
                                             <action selector="touchDown:" destination="ReA-Ll-AJV" eventType="touchDown" id="GCG-vf-R6J"/>
-                                            <segue destination="Y6E-HC-xTy" kind="unwind" unwindAction="saveStoryPromptWithUnwindSegue:" id="qWs-kp-Hz0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -309,6 +308,7 @@
                         <outlet property="saveButton" destination="aIe-ZB-cOo" id="RPR-ei-05b"/>
                         <outlet property="storyPromptTextView" destination="gh5-0k-1Br" id="En9-08-Lrl"/>
                         <segue destination="Y6E-HC-xTy" kind="unwind" identifier="CancelStoryPrompt" unwindAction="cancelStoryPromptWithUnwindSegue:" id="hMq-70-NxF"/>
+                        <segue destination="Y6E-HC-xTy" kind="unwind" identifier="SaveStoryPrompt" unwindAction="saveStoryPromptWithUnwindSegue:" id="fc8-Rf-GJ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCl-j5-Nu9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -318,7 +318,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="exQ-PA-yCV"/>
+        <segue reference="DB7-TG-VA3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="05.circle" catalog="system" width="128" height="121"/>

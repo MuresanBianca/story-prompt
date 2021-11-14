@@ -7,11 +7,14 @@
 
 import UIKit
 
+let popUpIsSelectedNotificationKey = "mbm.popup.isselected"
+
 class StoryPromptViewController: UIViewController {
     
     var storyPromt: StoryPromptEntry?
     var isNewStoryPrompt = false
-    
+    let popUP = PopUp()
+    let submited = Notification.Name(rawValue: popUpIsSelectedNotificationKey)
 
     //-- Outles
     @IBOutlet weak var storyPromptTextView: UITextView!
@@ -20,9 +23,16 @@ class StoryPromptViewController: UIViewController {
     
     //-- Functions
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         storyPromptTextView.text = storyPromt?.description
+        view.addSubview(popUP)
+        popUP.isHidden = true
+        createObservers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +56,20 @@ class StoryPromptViewController: UIViewController {
     }
     
     @IBAction func saveStory(_ sender: UIButton) {
+        
         sender.configuration?.baseBackgroundColor = UIColor(red: 243.0/255, green: 245.0/255, blue: 248.0/255, alpha: 0.79)
+        
+        popUP.isHidden = false
+          
+    }
+    
+    func createObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(StoryPromptViewController.performSegue(notification:))  , name: submited, object: nil)
+    }
+    
+    @objc func performSegue(notification: NSNotification) {
+        storyPromt?.name = popUP.storyName
+        performSegue(withIdentifier: "SaveStoryPrompt", sender: nil)
     }
     
     @IBAction func touchDown(_ sender: UIButton) {

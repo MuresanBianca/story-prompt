@@ -39,7 +39,7 @@ class StoryPromptTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //try to seee if there is a previous available cell and using it as the template for the new cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoryPromptCell", for: indexPath)
-        cell.textLabel?.text = "Prompt \(indexPath.row + 1)"
+        cell.textLabel?.text = storyPrompts[indexPath.row].name
         cell.imageView?.image = storyPrompts[indexPath.row].image
         
         return cell

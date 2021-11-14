@@ -17,6 +17,7 @@
 		34AE3C0C273E883100B74EA2 /* StoryPromptEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE3C0B273E883100B74EA2 /* StoryPromptEntry.swift */; };
 		34AE3C0F273E888700B74EA2 /* StoryPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE3C0E273E888700B74EA2 /* StoryPrompt.swift */; };
 		34AE3C11273E9AA400B74EA2 /* StoryPromptTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE3C10273E9AA400B74EA2 /* StoryPromptTableViewController.swift */; };
+		34AE3C142741667300B74EA2 /* getPromptNamePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE3C132741667300B74EA2 /* getPromptNamePopUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		34AE3C0B273E883100B74EA2 /* StoryPromptEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPromptEntry.swift; sourceTree = "<group>"; };
 		34AE3C0E273E888700B74EA2 /* StoryPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPrompt.swift; sourceTree = "<group>"; };
 		34AE3C10273E9AA400B74EA2 /* StoryPromptTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPromptTableViewController.swift; sourceTree = "<group>"; };
+		34AE3C132741667300B74EA2 /* getPromptNamePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getPromptNamePopUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		34AE3BEC273BA0E700B74EA2 /* StoryPrompt */ = {
 			isa = PBXGroup;
 			children = (
+				34AE3C122741663200B74EA2 /* PopUp */,
 				34AE3C0A273E87F600B74EA2 /* Models */,
 				34AE3C08273E6EDE00B74EA2 /* ViewControllers */,
 				34AE3BED273BA0E700B74EA2 /* AppDelegate.swift */,
@@ -93,6 +96,14 @@
 				34AE3C0E273E888700B74EA2 /* StoryPrompt.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		34AE3C122741663200B74EA2 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				34AE3C132741667300B74EA2 /* getPromptNamePopUp.swift */,
+			);
+			path = PopUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 			files = (
 				34AE3C11273E9AA400B74EA2 /* StoryPromptTableViewController.swift in Sources */,
 				34AE3C0C273E883100B74EA2 /* StoryPromptEntry.swift in Sources */,
+				34AE3C142741667300B74EA2 /* getPromptNamePopUp.swift in Sources */,
 				34AE3C07273E6ED100B74EA2 /* StoryPromptViewController.swift in Sources */,
 				34AE3BF2273BA0E700B74EA2 /* AddStoryPromptViewController.swift in Sources */,
 				34AE3BEE273BA0E700B74EA2 /* AppDelegate.swift in Sources */,

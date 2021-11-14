@@ -98,7 +98,6 @@ class AddStoryPromptViewController: UIViewController {
         present(pickerController,animated: true)
     }
     
-    
     func resignAllFirstResponders() {
         self.nounTextField.resignFirstResponder()
         self.verbTextField.resignFirstResponder()
