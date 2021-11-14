@@ -284,6 +284,7 @@
                                         <connections>
                                             <action selector="saveStory:" destination="ReA-Ll-AJV" eventType="touchUpInside" id="sar-P7-Tcl"/>
                                             <action selector="touchDown:" destination="ReA-Ll-AJV" eventType="touchDown" id="GCG-vf-R6J"/>
+                                            <segue destination="Y6E-HC-xTy" kind="unwind" unwindAction="saveStoryPromptWithUnwindSegue:" id="qWs-kp-Hz0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -304,16 +305,20 @@
                     <navigationItem key="navigationItem" id="HVW-Kc-1fO"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="discardButton" destination="IhZ-IQ-yiM" id="Agn-8c-lFz"/>
+                        <outlet property="saveButton" destination="aIe-ZB-cOo" id="RPR-ei-05b"/>
                         <outlet property="storyPromptTextView" destination="gh5-0k-1Br" id="En9-08-Lrl"/>
+                        <segue destination="Y6E-HC-xTy" kind="unwind" identifier="CancelStoryPrompt" unwindAction="cancelStoryPromptWithUnwindSegue:" id="hMq-70-NxF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCl-j5-Nu9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Y6E-HC-xTy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1013" y="252"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DB7-TG-VA3"/>
+        <segue reference="exQ-PA-yCV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="05.circle" catalog="system" width="128" height="121"/>

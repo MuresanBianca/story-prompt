@@ -33,6 +33,7 @@ import Foundation
 import UIKit
 
 class StoryPromptEntry {
+  var name = ""
   var number = 0
   var verb = ""
   var adjective = ""

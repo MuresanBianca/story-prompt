@@ -10,11 +10,13 @@ import UIKit
 class StoryPromptViewController: UIViewController {
     
     var storyPromt: StoryPromptEntry?
+    var isNewStoryPrompt = false
     
+
     //-- Outles
     @IBOutlet weak var storyPromptTextView: UITextView!
-    
-    
+    @IBOutlet weak var discardButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
     
     //-- Functions
     
@@ -22,9 +24,25 @@ class StoryPromptViewController: UIViewController {
         super.viewDidLoad()
         storyPromptTextView.text = storyPromt?.description
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if isNewStoryPrompt {
+            navigationController?.setNavigationBarHidden(true, animated: animated)
+        } else {
+            discardButton.isHidden = true
+            saveButton.isHidden = true
+            navigationController?.setNavigationBarHidden(false, animated: animated)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 
     @IBAction func discardStory(_ sender: UIButton) {
         sender.configuration?.baseBackgroundColor = UIColor(red: 243.0/255, green: 245.0/255, blue: 248.0/255, alpha: 0.79)
+        
+        performSegue(withIdentifier: "CancelStoryPrompt", sender: nil)
     }
     
     @IBAction func saveStory(_ sender: UIButton) {
@@ -34,6 +52,8 @@ class StoryPromptViewController: UIViewController {
     @IBAction func touchDown(_ sender: UIButton) {
         sender.configuration?.baseBackgroundColor = UIColor(red: 107.0/255, green: 59.0/255, blue: 177.0/255, alpha: 0.59)
     }
+    
+    
     
 }
 

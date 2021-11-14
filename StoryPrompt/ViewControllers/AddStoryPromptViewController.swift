@@ -55,8 +55,6 @@ class AddStoryPromptViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool){
         self.navigationController!.navigationBar.isTranslucent = true
-       
-
     }
     
     @IBAction func changeStory(_ sender: UIButton) {
@@ -85,6 +83,7 @@ class AddStoryPromptViewController: UIViewController {
                 return
             }
             storyPromptViewController.storyPromt = storyPromt
+            storyPromptViewController.isNewStoryPrompt = true
         }
     }
     
@@ -110,6 +109,7 @@ class AddStoryPromptViewController: UIViewController {
         storyPromt.noun = nounTextField.text ?? ""
         storyPromt.verb = verbTextField.text ?? ""
         storyPromt.adjective = adjectiveTextField.text ?? ""
+        storyPromt.image = storyPromptImageView.image
     }
     
     func configureTextFields() {
