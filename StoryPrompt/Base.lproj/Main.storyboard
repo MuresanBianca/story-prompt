@@ -259,15 +259,46 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="ret-W3-wey">
+                                <rect key="frame" x="94" y="808.5" width="226" height="41.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhZ-IQ-yiM">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="41.5"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Discard" cornerStyle="medium" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
+                                            <color key="baseForegroundColor" red="0.086458437139999997" green="0.073804982010000006" blue="0.1137298569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" red="0.95306485890000003" green="0.96059340240000002" blue="0.97255140539999996" alpha="0.78807967230184184" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="discardStory:" destination="ReA-Ll-AJV" eventType="touchUpInside" id="hdv-rf-vr7"/>
+                                            <action selector="touchDown:" destination="ReA-Ll-AJV" eventType="touchDown" id="trP-f8-Z9G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIe-ZB-cOo">
+                                        <rect key="frame" x="126" y="0.0" width="100" height="41.5"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Save" cornerStyle="medium" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
+                                            <color key="baseForegroundColor" red="0.086458437139999997" green="0.073804982010000006" blue="0.1137298569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" red="0.95306485890000003" green="0.96059340240000002" blue="0.97255140539999996" alpha="0.78807967230184184" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="saveStory:" destination="ReA-Ll-AJV" eventType="touchUpInside" id="sar-P7-Tcl"/>
+                                            <action selector="touchDown:" destination="ReA-Ll-AJV" eventType="touchDown" id="GCG-vf-R6J"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2TU-lt-hob"/>
                         <color key="backgroundColor" red="0.79268091919999994" green="0.81873601679999997" blue="0.87451785800000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="gh5-0k-1Br" firstAttribute="centerY" secondItem="cSj-m7-tGk" secondAttribute="centerY" id="QCM-VF-Q1b"/>
                             <constraint firstItem="cSj-m7-tGk" firstAttribute="centerY" secondItem="X23-yI-nPl" secondAttribute="centerY" id="cUg-wE-hBi"/>
+                            <constraint firstItem="2TU-lt-hob" firstAttribute="bottom" secondItem="ret-W3-wey" secondAttribute="bottom" constant="12" id="jhP-gz-fCY"/>
                             <constraint firstItem="cSj-m7-tGk" firstAttribute="width" secondItem="X23-yI-nPl" secondAttribute="width" id="p6V-10-OGI"/>
                             <constraint firstItem="cSj-m7-tGk" firstAttribute="centerX" secondItem="X23-yI-nPl" secondAttribute="centerX" id="t4q-t0-9pK"/>
                             <constraint firstItem="gh5-0k-1Br" firstAttribute="centerX" secondItem="cSj-m7-tGk" secondAttribute="centerX" id="xMf-bx-TC7"/>
+                            <constraint firstItem="ret-W3-wey" firstAttribute="centerX" secondItem="X23-yI-nPl" secondAttribute="centerX" id="xgp-hN-3Mx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HVW-Kc-1fO"/>
